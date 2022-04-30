@@ -1,0 +1,34 @@
+{
+  "root": "packages/authenticator",
+  "sourceRoot": "packages/authenticator/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/authenticator",
+        "tsConfig": "packages/authenticator/tsconfig.lib.json",
+        "packageJson": "packages/authenticator/package.json",
+        "main": "packages/authenticator/src/index.ts",
+        "assets": ["packages/authenticator/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/authenticator/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/authenticator"],
+      "options": {
+        "jestConfig": "packages/authenticator/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

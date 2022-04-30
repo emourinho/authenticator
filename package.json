@@ -1,0 +1,45 @@
+{
+  "name": "emoutech",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "lint": "nx lint",
+    "test": "nx test",
+    "clear": "sudo rm -rf node_modules dist tmp"
+  },
+  "private": true,
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "class-validator": "^0.13.2",
+    "graphql": "^15.3.0",
+    "tslib": "^2.3.0",
+    "type-graphql": "^1.1.1"
+  },
+  "devDependencies": {
+    "@nrwl/cli": "14.0.5",
+    "@nrwl/eslint-plugin-nx": "14.0.5",
+    "@nrwl/jest": "14.0.5",
+    "@nrwl/js": "14.0.5",
+    "@nrwl/linter": "14.0.5",
+    "@nrwl/node": "^14.0.5",
+    "@nrwl/workspace": "14.0.5",
+    "@types/jest": "27.4.1",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "~5.18.0",
+    "@typescript-eslint/parser": "~5.18.0",
+    "eslint": "~8.12.0",
+    "eslint-config-prettier": "8.1.0",
+    "jest": "27.5.1",
+    "nx": "14.0.5",
+    "prettier": "^2.5.1",
+    "ts-jest": "27.1.4",
+    "ts-node": "9.1.1",
+    "typescript": "~4.6.2"
+  },
+  "workspaces": [
+    "packages/**"
+  ]
+}
