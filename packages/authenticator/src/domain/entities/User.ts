@@ -51,17 +51,27 @@ export class User extends UserProps {
         };
         this.createdAt = new Date()
         break;
+      default:
+        throw new Error(`Provider ${provider} not valid`);
     }
+
+
   }
 
   generateToken(expiresIn = "20h") {
     if (!this._id) {
       throw new Error('Id is undefined');
     }
-    return sign({ _id: this._id }, process.env.NX_JWT_SECRET, { expiresIn })
+    return sign({
+      _id: this._id,
+      name: this.name,
+      roles: ["SUPER_ADMIN", "ADMIN"]
+    }, process.env.NX_JWT_SECRET, { expiresIn })
   }
 
   verifyPassword(pass) {
-    return compareSync(pass, this.password);
+    const compare = compareSync(pass, this.password);
+    this.password = undefined
+    return compare
   }
 }

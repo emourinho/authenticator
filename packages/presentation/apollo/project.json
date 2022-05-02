@@ -29,7 +29,8 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "presentation-apollo:build"
+        "buildTarget": "presentation-apollo:build",
+        "host": "0.0.0.0"
       }
     },
     "lint": {

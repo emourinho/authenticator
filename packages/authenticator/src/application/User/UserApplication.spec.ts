@@ -4,7 +4,7 @@ import {
   UserProps,
   readByPageReturn,
   User,
-} from '../domain';
+} from '../../domain';
 import { UserApplication } from './UserApplication';
 
 class UserRepositorySpy implements IUserRepository {
