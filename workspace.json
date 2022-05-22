@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "authenticator": "libs/authenticator",
+    "backend": "apps/backend",
+    "frontend": "apps/frontend",
+    "frontend-e2e": "apps/frontend-e2e",
+    "react-authenticator": "libs/react-authenticator"
+  }
+}

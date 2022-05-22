@@ -10,19 +10,7 @@ env:
   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test
-
   publish-gpr:
-    needs: test
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -34,5 +22,11 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
+      - run: yarn lint
+      - run: yarn test
+
       - run: yarn build authenticator
+      - run: yarn build react-authenticator
+
       - run: yarn publish dist/packages/authenticator
+      - run: yarn publish dist/packages/react-authenticator

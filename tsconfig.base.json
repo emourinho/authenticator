@@ -4,19 +4,21 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "esModuleInterop": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2018",
-    "module": "ES2022",
-    "lib": ["es2018", "esnext.asynciterable", "dom"],
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@emourinho/authenticator": ["packages/authenticator/src/index.ts"]
+      "@emourinho/authenticator": ["libs/authenticator/src/index.ts"],
+      "@emourinho/react-authenticator": [
+        "libs/react-authenticator/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
