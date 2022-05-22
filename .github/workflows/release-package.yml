@@ -28,5 +28,5 @@ jobs:
       - run: yarn build authenticator
       - run: yarn build react-authenticator
 
-      - run: yarn publish dist/packages/authenticator
-      - run: yarn publish dist/packages/react-authenticator
+      - run: yarn publish dist/libs/authenticator
+      - run: yarn publish dist/libs/react-authenticator
