@@ -48,5 +48,3 @@ export function Login() {
     </StyledLogin>
   );
 }
-
-export default Login;

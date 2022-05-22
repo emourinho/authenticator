@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ReactAuthenticator from './react-authenticator';
+import { Login } from './login';
 
-describe('ReactAuthenticator', () => {
+describe('Login', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ReactAuthenticator />);
+    const { baseElement } = render(<Login />);
     expect(baseElement).toBeTruthy();
   });
 });
