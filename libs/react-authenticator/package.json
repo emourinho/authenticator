@@ -1,5 +1,8 @@
 {
   "name": "@emourinho/react-authenticator",
   "license": "MIT",
+  "author": {
+    "name": "Everton Mourinho"
+  },
   "version": "0.0.1"
 }
