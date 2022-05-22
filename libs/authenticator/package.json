@@ -1,6 +1,7 @@
 {
   "name": "@emourinho/authenticator",
   "license": "MIT",
+  "repository":"https://github.com/emourinho/authenticator",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
