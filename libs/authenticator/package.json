@@ -1,5 +1,11 @@
 {
   "name": "@emourinho/authenticator",
   "license": "MIT",
-  "version": "0.0.3"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": {
+    "name": "Everton Mourinho"
+  },
+  "version": "0.0.4"
 }
