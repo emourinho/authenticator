@@ -3,8 +3,8 @@ name: Node.js Package
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+    - 'libs/react-authenticator/**'
 
 env:
   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -22,11 +22,7 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
-      - run: yarn lint
-      - run: yarn test
-
-      - run: yarn build authenticator
+      - run: yarn lint react-authenticator
+      - run: yarn test react-authenticator
       - run: yarn build react-authenticator
-
-      - run: yarn publish dist/libs/authenticator
       - run: yarn publish dist/libs/react-authenticator

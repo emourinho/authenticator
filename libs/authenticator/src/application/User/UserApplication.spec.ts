@@ -45,7 +45,7 @@ describe('UserApplication', () => {
     };
 
     const sut = new UserApplication(new UserRepositorySpy());
-    const newUser = await sut.createOrUpdate(USER_MOCK, 'local');
+    const newUser = await sut.createUser(USER_MOCK, 'local');
 
     expect(newUser._id).toBeDefined();
     expect(newUser.password).toBeUndefined();
@@ -62,7 +62,7 @@ describe('UserApplication', () => {
 
     const sut = new UserApplication(new UserRepositorySpy());
     await expect(
-      sut.createOrUpdate({ ...USER_MOCK, email: undefined }, 'local')
+      sut.createUser({ ...USER_MOCK, email: undefined }, 'local')
     ).rejects.toThrowError();
   });
 
@@ -75,7 +75,7 @@ describe('UserApplication', () => {
 
     const sut = new UserApplication(new UserRepositorySpy());
     await expect(
-      sut.createOrUpdate({ ...USER_MOCK, email: undefined }, 'local')
+      sut.createUser({ ...USER_MOCK, email: undefined }, 'local')
     ).rejects.toThrowError();
   });
 
@@ -88,7 +88,7 @@ describe('UserApplication', () => {
 
     const sut = new UserApplication(new UserRepositorySpy());
     await expect(
-      sut.createOrUpdate({ ...USER_MOCK, password: undefined }, 'local')
+      sut.createUser({ ...USER_MOCK, password: undefined }, 'local')
     ).rejects.toThrowError();
   });
 
@@ -101,7 +101,7 @@ describe('UserApplication', () => {
 
     const sut = new UserApplication(new UserRepositorySpy());
 
-    const newUser = await sut.createOrUpdate(USER_MOCK, 'facebook');
+    const newUser = await sut.createUser(USER_MOCK, 'facebook');
 
     expect(newUser._id).toBeDefined();
     expect(newUser.password).toBeUndefined();
